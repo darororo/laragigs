@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ListingController extends Controller
 {
     public function index() {
-        return view('listings', [
+        return view('listings.index', [
             'heading' => 'hi',
             'listings' => Listing::all(),
         ]);
@@ -16,7 +16,7 @@ class ListingController extends Controller
 
     // Single Listing
     public function show(Listing $listing) {
-        return view('listing ', [
+        return view('listings.show', [
             'listing' => $listing
         ]);
     }
