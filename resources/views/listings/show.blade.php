@@ -10,7 +10,8 @@
         >
             <img
                 class="w-48 mr-6 mb-6"
-                src={{asset("images/no-image.png")}}
+                src={{$listing->logo ? asset('storage/' . $listing->logo) 
+                : asset("images/no-image.png")}}
                 alt=""
             />
 
@@ -40,7 +41,7 @@
                     >
 
                     <a
-                        href="/{{$listing->website}}"
+                        href="{{$listing->website}}"
                         target="_blank"
                         class="block bg-black text-white py-2 rounded-xl hover:opacity-80"
                         ><i class="fa-solid fa-globe"></i> Visit
